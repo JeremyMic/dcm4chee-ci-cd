@@ -24,10 +24,11 @@ jobs:
 
     - name: Install Maven
       run: |
-        wget -q https://apache.osuosl.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
-        tar xf apache-maven-3.8.4-bin.tar.gz
-        export PATH=$PATH:$(pwd)/apache-maven-3.8.4/bin
-        mvn --version
+          # Download and install Maven
+          wget -q https://apache.osuosl.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
+          tar xf apache-maven-3.8.4-bin.tar.gz
+          export PATH=$PATH:$(pwd)/apache-maven-3.8.4/bin
+          mvn --version
 
     - name: Build and Install
       run: mvn clean install
